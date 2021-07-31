@@ -1,0 +1,17 @@
+---
+title: 'Chapter 02: Numerics, Arithmetic, Assignment and Vectors'
+output:
+  html_document:
+    df_print: paged
+---
+
+## Exercise 2.4
+  
+  <ol type="a">
+    <li>Create and store a vector that contains the following, in this order:</li>
+      <ul>
+        <li>A sequence of length 5 from 3 to 6 (inclusive)</li>
+        <li>A twofold repetition of the vector $c(2, -5.1, -33)$</li>
+      </ul>
+      
+  </ol>
