@@ -12,6 +12,23 @@ output:
       <ul>
         <li>A sequence of length 5 from 3 to 6 (inclusive)</li>
         <li>A twofold repetition of the vector $c(2, -5.1, -33)$</li>
+        <li>The value $\dfrac{7}{42} + 2$</li>
       </ul>
-      
+```{r}
+  vec.1 <- seq(from=3, to=6, length.out=5)
+  vec.1
+  vec.2 <- rep(c(2, -5.1, -33), each=2)
+  vec.2
+  vec.3 <- c(7/42 + 3)
+  vec.3
+  vec.a <- c(vec.1, vec.2, vec.3)
+  vec.a
+```
+    <li>Extract the first and the last elements of your vector from (a), storing then as a new object.</li>
+    <li>Store as a third object the values returned by omitting the first and the ast of your vector from (a).</li>
+    <li>Use only (b) and (c) to reconstruct (a).</li>
+    <li>Overwrite (a) with the same values sorted from smallest to largest.</li>
+    <li>Use the colon operator as an index vector to reverse the order of (e), and confirm this is identical to using sort on (e) with decreasing=TRUE</li>
+    <li>Create a vector from (c) that repeats the third element of (c) thee times, the six element four times and the last element once.</li>
   </ol>
+  
