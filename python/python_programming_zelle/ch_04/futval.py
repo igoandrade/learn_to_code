@@ -2,6 +2,8 @@
 import math
 from graphics import *
 
+
+
 def future_value(principal, taxa, tempo):
     fv = principal * (1 + taxa/100) ** tempo
     return fv
@@ -23,6 +25,10 @@ def main():
         lista_valor_futuro.append(valor_futuro)
         print(f"{i:>3d} | R$ {valor_futuro:>9.2f}")
     print(num_colunas*'=')
+
+
+
+
     
     valor_minimo = min(lista_valor_futuro)
     valor_maximo = max(lista_valor_futuro)
@@ -33,15 +39,16 @@ def main():
     pos_inicial_x = .05 * largura_janela
     pos_inicial_y = .9 * altura_janela
     largura_barra = (.85 * largura_janela - 3*pos_inicial_x) / tempo
-    janela = GraphWin('Investiment Growth Chart', largura_janela, altura_janela)
+    
     valor_maximo_K = valor_maximo
     fator_mult = 1
     while valor_maximo_K >= 100:
         valor_maximo_K /= 10
         fator_mult *= 10
-    valor_maximo_K = (1+int(valor_maximo_K)//25) * 2.5
+    valor_maximo_K = (1+int(valor_maximo_K)//15) * 1.5
     fator_mult *= 10
 
+    janela = GraphWin('Investiment Growth Chart', largura_janela, altura_janela)
     passo_legenda = valor_maximo_K /5
     for i in range(6):
         legenda = passo_legenda * i
@@ -59,8 +66,6 @@ def main():
         rect.setOutline('black')
         rect.draw(janela)
 
-
-
     input("Pressione <Enter> para sair: ")
     janela.close()
 
@@ -68,3 +73,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
