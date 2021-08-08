@@ -99,10 +99,10 @@ def main():
             lista_pontos.append(p)
             desenha_ponto(janela, p, True)
         elif clicou_limpar(p):
-            ponto_1.undraw()
-            ponto_2.undraw()
-            ponto_3.undraw()
-            triangulo.undraw()
+            #ponto_1.undraw()
+            #ponto_2.undraw()
+            #ponto_3.undraw()
+            #triangulo.undraw()
             lista_pontos = []
             desenha_area_trabalho(janela)
             perimetro_txt.setText("")
