@@ -12,7 +12,6 @@ Enunciado:
 """
 
 import math
-from tkinter import TkVersion
 from graphics import *
 
 def clicou_retangulo(p=Point(0,0), x_inf=-9.5, y_inf=-9.5, x_sup=9.5, y_sup=9.5):
