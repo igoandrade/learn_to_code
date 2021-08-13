@@ -1,18 +1,14 @@
 /*
 Enunciado:
-    Random walk. A Java programmer begins walking aimlessly. At each time step, she takes one 
-    step in a random direction (either north, east, south, or west), each with probability 25%. 
-    She stops once she is at Manhattan distance r from the starting point. How many steps will
-    the random walker take? This process is known as a two-dimensional random walk.
-
-    Write a program RandomWalker.java that takes an integer command-line argument r and simulates 
-    the motion of a random walk until the random walker is at Manhattan distance r from the 
-    starting point. Print the coordinates at each step of the walk 
-    (including the starting and ending points), treating the starting point as (0, 0). 
-    Also, print the total number of steps taken.
+    2D random walk. A two-dimensional random walk simulates the behavior of a particle 
+    moving in a grid of points. At each step, the random walker moves north, south, east, 
+    or west with probability equal to 1/4, independent of previous moves. Write a 
+    program RandomWalker that takes an integer command-line argument n and estimates how 
+    long it will take a random walker to hit the boundary of a 2n-by-2n square centered 
+    at the starting point.
 */
 
-
+package opcionais;
 
 public class RandomWalker
 {
