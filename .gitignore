@@ -1,3 +1,4 @@
 **/ex*/
 ./java/java_coursera/*.zip
 **/.vscode/
+**/.env
