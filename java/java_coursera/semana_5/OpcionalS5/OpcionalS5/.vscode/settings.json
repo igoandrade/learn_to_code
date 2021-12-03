@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/media/sf_Dados/Projetos/learn_to_code/java/java_coursera/libs/stdlib.jar"
+    ]
+}

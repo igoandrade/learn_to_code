@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padrão de código HTML</title>
+    <style>
+        blockquote {
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .sublinhado {
+            text-decoration: underline;
+            font-size: 15pt;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elementos de bloco, Elementos de texto e Caracteres de referência</h1>
+    <h2>O elemento <code>blockquote</code></h2>
+    <p>A tag <code>blockquote</code> pode ser usada para inserir citações com mais de uma linha.</p>
+    <blockquote cite="https://docs.microsoft.com/pt-br/learn/modules/python-object-oriented-programming/2-what-is-oop">
+        O paradigma OOP não é diferente nesse aspecto. O que o destaca é a maneira como examina o mundo. 
+        Em comparação com a programação procedural, a OOP dá um passo para trás e examina todo o panorama. 
+        Em vez de trabalhar nos dados e levá-los de uma fase para a seguinte, a OOP tenta entender o mundo 
+        em que os dados são operados. Ela faz isso <em>modelando</em> o que vê.
+    </blockquote>
+    <div><strong>Microsoft</strong>, 2021. <a href="https://docs.microsoft.com/pt-br/learn/paths/python-language/" target="_blank">Criar aplicativos do mundo real com o Python</a>.</div>
+
+    <h2>Espaços em branco</h2>
+    <p>Por padrão, o <abbr title="HyperText Markup Language">HTML</abbr> ignora espaços em branco. Por exemplo, o seguinte poema <em>Haiku</em> deveria ser mostrado em três linhas:</p>
+            Life is a journey.
+    Cross the rivers, climb the peaks.
+        But first check for texts.
+    <p>Uma maneira de dispor o texto na forma desejada é usando a tag <code>pre</code>:</p>
+    <pre>
+            Life is a journey.
+    Cross the rivers, climb the peaks.
+        But first check for texts.        
+    </pre>
+
+    <h2>O elemento <code>time</code></h2>
+    <p>Para indicar <span class="sublinhado">datas e hora</span>, podemos utilizar a tag <code>time</code>. Por exemplo, esse arquivo está sendo escrito em <time datetime="2021-08-14">14 de Agosto de 2021</time> por volta do <time datetime="12:00">meio-dia</time>.</p>
+
+    <h2>Elementos relacionados à código</h2>
+    <p>Para mostrar sintaxe de código, podemos usar as tags:</p>
+    <ul>
+        <li><code>code</code>: indica que o texto é m código de programação;</li>
+        <li><code>kbd</code>: representa uma entrada para um programa.</li>
+        <li><code>samp</code>: indica que o texto é uma saída de um programa.</li>
+        <li><code>var</code>: pode representar tanto uma variável de um programa quanto uma variável matemática.</li>
+    </ul>
+
+    <h2>Character References</h2>
+    Um <dfn>character reference</dfn> é um código HTML para mostrar um caractere que de outra forma seria difícil de sr mostrado. Por exemplo, para dizer que uma variável <var>x</var> é menor que zero, podemos usar o código <code>&amp;lt;</code>: <var>x</var> &lt; 0.
+</body>
+</html>

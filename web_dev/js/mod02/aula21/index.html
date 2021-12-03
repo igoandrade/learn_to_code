@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 21</title>
+
+
+
+</head>
+<body>
+    <h1>Exercícios com <code>numbers</code> e <code>Math</code></h1>
+
+    <h2>O seu número é <span id="numero-titulo"></span></h2>
+    <p>Raiz quadrada: <span id="raiz-quadrada"></span></p>
+    <p><span id="numero-paragrafo"></span> é inteiro: <code><span id="ehInteiro"></span></code></p>
+    <p>É <code>NaN</code>: <code><span id="ehNaN"></span></code></p>
+    <p>Arredondado para baixo: <span id="floor"></span></p>
+    <p>Arredondado para baixo: <span id="ceil"></span></p>
+    <p>Com duas casas decimais: <span id="toFixed-2"></span></p>
+    
+    
+</body>
+</html>
+
+<script>
+    const numero = Number(prompt("Digite um número:"));
+    document.getElementById('numero-titulo').innerHTML = numero;
+    document.getElementById('raiz-quadrada').innerHTML = numero**0.5;
+    document.getElementById('numero-paragrafo').innerHTML = numero;
+    document.getElementById('ehInteiro').innerHTML = Number.isInteger(numero);
+    document.getElementById('ehNaN').innerHTML = Number.isNaN(numero);
+    document.getElementById('floor').innerHTML = Math.floor(numero);
+    document.getElementById('ceil').innerHTML = Math.ceil(numero);
+    document.getElementById('toFixed-2').innerHTML = numero.toFixed(2);
+</script>

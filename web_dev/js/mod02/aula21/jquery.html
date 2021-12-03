@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+    <h1>Exercícios com <code>numbers</code> e <code>Math</code></h1>
+
+    <div class="form">
+        <label>Número: </label>
+        <input type="number" id="number">
+        <input type="button" value="OK" id="ok">
+    </div>
+
+    <div id="resultado" style="display: none;">
+        <h2>O seu número é <span name="numero"></span></h2>
+        <p>Raiz quadrada: <span id="raiz-quadrada"></span></p>
+        <p><span name="numero"></span> é inteiro: <code><span id="ehInteiro"></span></code></p>
+        <p>É <code>NaN</code>: <code><span id="ehNaN"></span></code></p>
+        <p>Arredondado para baixo: <span id="floor"></span></p>
+        <p>Arredondado para baixo: <span id="ceil"></span></p>
+        <p>Com duas casas decimais: <span id="toFixed-2"></span></p>
+    </div>
+
+    <div>
+        <input type="button" value="Limpar" id="limpar">
+    </div>
+
+    
+    
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $('#ok').click(function(){
+            const numero = Number($('#number').val());
+            console.log(numero);
+            $('span[name=numero]').html(numero);
+            $('#raiz-quadrada').html(numero**0.5);
+            $('#ehInteiro').html(Number.isInteger(numero));
+            $('#ehNaN').html(String(Number.isNaN(numero)));
+            $('#floor').html(Math.floor(numero));
+            $('#ceil').html(Math.ceil(numero));
+            $('#toFixed-2').html(numero.toFixed(2));
+            $('#resultado').show();
+        });
+        $('#limpar').click(function(){
+            location.reload();
+        });
+    });
+</script>

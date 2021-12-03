@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "semana_1",
+        "semana_2",
+        "semana_3",
+        "semana_4"
+
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "stdlib.jar"
+    ]
+}
