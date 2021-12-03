@@ -14,6 +14,11 @@
  *
  ******************************************************************************/
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6df297636a1736cfb8c3a7daeef732947ef6e510
 public class Bernoulli { 
 
     // number of heads when flipping n biased-p coins
