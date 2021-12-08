@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Lista de Tarefas</h1>
+
+        <form class="form-tarefas">
+            <input type="text" name="add-tarefa" id="input-tarefa">
+            <button class="btn-add" onclick="addTarefa()">Adicionar Tarefa</button>
+        </form>
+
+        <div class="tbl-tarefas">
+            <table >
+                <thead>
+                    <tr>
+                        <th>Descrição da Tarefa</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-tarefas"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
