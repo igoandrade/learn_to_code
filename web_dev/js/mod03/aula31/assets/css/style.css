@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(71, 71, 71);
+    --primary-color-darker: rgb(59, 59, 59);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: dimgray;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 50%;
+    min-width: 360px;
+    margin: 50px auto;
+    background: #000;
+    padding: 20px;
+    border-radius: 5px;
+    border-color: var(--primary-color-darker);
+}
+
+.container h1 {
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+    border-style: none none solid none;
+    border-color: var(--primary-color-darker);
+    border-width: 1.5px;
+}
+
+
+.div-timer {
+    margin: 24px auto;
+    text-align: center;
+    color: white;
+}
+p.timer {
+    text-align: center;
+    font-weight: 600;
+    font-size: 40pt;
+}
+
+.btn {
+    font-weight: 600;
+    border-radius: 15px;
+    border-style: none;
+    width: 75px;
+    height: 24px;
+    cursor: pointer;
+}
+
+
+.btn-iniciar {
+    background-color: darkgreen;
+    color: white;
+}
+
+.btn-iniciar:hover {
+    background-color:forestgreen;
+}
+
+.btn-pausar, .btn-continuar {
+    background-color:brown;
+    color: white;
+    display: none;
+}
+
+.btn-pausar:hover, .btn-continuar:hover {
+    background-color:red;
+}
+
+.btn-zerar, .btn-volta {
+    background-color:darkblue;
+    color: white;
+}
+
+.btn-volta {
+    display: none;
+}
+
+.btn-zerar:hover, .btn-volta:hover {
+    background-color: blue;
+}
+
+.tbl-volta {
+    color: white;
+    display: none;
+}
+
+table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 8pt;
+}
+
+thead {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #575757;
+}
+
+tr:nth-child(even) {
+    background-color: #222222;
+    
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
