@@ -14,16 +14,18 @@ function Calculadora() {
 
         if (this.ans && element.classList.contains('btn-num')) {
             this.display.value = element.innerText;
-            //this.ans = '';
+            this.display.focus();
             return;
         }
 
         if (this.display.value && element.innerText==='(') {
             this.display.value += '*(';
             this.ans = '';
+            this.display.focus();
             return;
         }
         this.display.value += element.innerText;
+        this.display.focus();
         this.ans = '';
         
     }
@@ -75,9 +77,9 @@ function Calculadora() {
 
     this.capturaEnter = () => {
         document.addEventListener('keypress', e => {
-            if (e.code !== "Enter") return;
-            e.preventDefault();
+            if (e.code !== "Enter" && e.code !== "NumpadEnter") return;
             this.realizaConta();
+            this.display.focus();
         })
     }
 }
