@@ -7,7 +7,26 @@ function Calculadora() {
         this.capturaEnter();
     }
 
-    this.addNumDisplay = element => this.display.value += element.innerText;
+    this.addNumDisplay = element => {
+        if (!this.display.value.includes('(') && element.innerText===')') return;
+
+        if (!this.display.value && element.classList.contains('btn-symbol')) return;
+
+        if (this.ans && element.classList.contains('btn-num')) {
+            this.display.value = element.innerText;
+            //this.ans = '';
+            return;
+        }
+
+        if (this.display.value && element.innerText==='(') {
+            this.display.value += '*(';
+            this.ans = '';
+            return;
+        }
+        this.display.value += element.innerText;
+        this.ans = '';
+        
+    }
 
     this.clear = () => this.display.value = '';
 
@@ -44,8 +63,10 @@ function Calculadora() {
     this.capturaCliques = () => {
         document.addEventListener('click', event => {
             const element = event.target;
+
             if (element.classList.contains('btn-num')) this.addNumDisplay(element);
             if (element.classList.contains('btn-symbol')) this.addNumDisplay(element);
+            if (element.classList.contains('btn-dot')) this.addNumDisplay(element);
             if (element.classList.contains('btn-clear')) this.clear();
             if (element.classList.contains('btn-del')) this.del();
             if (element.classList.contains('btn-equal')) this.realizaConta();
