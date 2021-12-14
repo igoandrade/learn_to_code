@@ -18,21 +18,21 @@ function Calculadora() {
             let operacao = this.display.value;
             const regExp = /[a-zA-Z]/g;
             if (regExp.test(operacao)) {
-                alert('Operação inválida!');
+                alert('Operação inválida!!!');
                 this.display.value = '';
                 this.ans = '';
                 return;
             } else {
-                let resultado = eval(operacao);
-                if (!resultado) {
-                    alert('Operação inválida!');
+                operacao = eval(operacao);
+                if (!operacao) {
+                    alert('Operação inválida!!');
                     this.display.value = '';
                     this.ans = '';
                     return;
                 }
             }
-            this.display.value = resultado;
-            this.ans = resultado;
+            this.display.value = operacao;
+            this.ans = operacao;
         } catch (err) {
             alert('Operação inválida!');
             this.display.value = '';
