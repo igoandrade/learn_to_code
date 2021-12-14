@@ -7,9 +7,6 @@ formTarefas.addEventListener('submit', (e) => {
     e.preventDefault();
 });
 
-
-
-
 const saveTasks = () => {
     const tdTasks = tbodyTarefas.querySelectorAll('.descricao-tarefa');
     let listaDeTarefas = [];
@@ -29,8 +26,6 @@ const addTarefa = () => {
     inputTarefa.value = '';
     saveTasks();
 };
-
-
 
 document.addEventListener('click', (e) => {
     const element = e.target;
@@ -53,6 +48,7 @@ const printTarefa = (tarefa) => {
 
 const getTasksFromLocalStorage = () => {
     const tasks = localStorage.getItem('tarefas');
+    console.log(tasks);
     const listOfTasks = JSON.parse(tasks);
     
     for (let tarefa of listOfTasks) {
